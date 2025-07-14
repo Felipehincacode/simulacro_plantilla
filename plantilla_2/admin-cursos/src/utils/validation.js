@@ -1,1 +1,0 @@
-// Funciones de validación
