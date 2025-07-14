@@ -1,2 +1,0 @@
-# simulacro_plantilla
- 

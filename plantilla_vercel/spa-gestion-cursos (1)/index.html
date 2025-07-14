@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Gestión de Cursos - SPA</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Encabezado de la aplicación -->
+    <header id="header" class="header hidden">
+        <div class="header-content">
+            <h1>Sistema de Gestión de Cursos</h1>
+            <div class="user-info">
+                <span id="userWelcome"></span>
+                <button id="logoutBtn" class="btn btn-secondary">Cerrar Sesión</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Barra lateral de navegación -->
+    <nav id="sidebar" class="sidebar hidden">
+        <ul class="nav-menu">
+            <li><a href="/" data-link>Panel de Control</a></li>
+            <li id="usersNavItem" class="hidden"><a href="/users" data-link>Gestión de Usuarios</a></li>
+            <li><a href="/courses" data-link>Cursos Disponibles</a></li>
+            <li id="enrollmentsNavItem" class="hidden"><a href="/enrollments" data-link>Mis Inscripciones</a></li>
+        </ul>
+    </nav>
+
+    <!-- Contenido principal de la aplicación -->
+    <main id="mainContent" class="main-content">
+        <!-- El contenido se renderiza dinámicamente aquí -->
+    </main>
+
+    <!-- Modal para formularios -->
+    <div id="modal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+
+    <!-- Indicador de carga -->
+    <div id="loadingSpinner" class="loading-spinner hidden">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Scripts de la aplicación -->
+    <script src="services/api-service.js"></script>
+    <script src="services/storage-service.js"></script>
+    <script src="services/auth-service.js"></script>
+    <script src="services/user-service.js"></script>
+    <script src="services/course-service.js"></script>
+    <script src="services/enrollment-service.js"></script>
+    <script src="utils/validation-utils.js"></script>
+    <script src="utils/navigation-service.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
